@@ -7,15 +7,14 @@ set -q XDG_DATA_HOME
 #set -gx OMF_CONFIG "/Users/shuhsi/.config/omf"
 
 
-# adding path function
-function add_to_path --description 'Persistently prepends paths to your PATH'
-  set --universal fish_user_paths $fish_user_paths $argv
-end
-
 # Load oh-my-fish configuration.
 source $OMF_PATH/init.fish
 
-##add customized path
+# virtual fish
+eval (python -m virtualfish)
 
-# anaconda
-add_to_path $PATH ~/anaconda/bin
+# fish_prompt
+## show virtual environment
+if set -q VIRTUAL_ENV
+    echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
+end
