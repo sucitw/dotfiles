@@ -13,8 +13,6 @@ source $OMF_PATH/init.fish
 # virtual fish
 eval (python -m virtualfish)
 
-# fish_prompt
-## show virtual environment
-if set -q VIRTUAL_ENV
-    echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
-end
+# alias
+##
+# alias ca "source ~/anaconda/bin/activate"
