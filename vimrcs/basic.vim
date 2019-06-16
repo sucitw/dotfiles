@@ -45,6 +45,9 @@ set history=500
 " Set a line at 80
 set cc=80
 
+" show number
+set number
+
 " Enable filetype plugins
 filetype plugin on
 filetype indent on
