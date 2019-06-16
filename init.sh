@@ -9,6 +9,6 @@ git clone --quiet https://github.com/sucitw/dotfiles.git ~/.dotfiles
 
 # symbolic link dotfiles
 cd ~/.dotfiles
-ln -fs `pwd`/vimrc/basic.vim ~/.vimrc
+ln -fs `pwd`/vimrcs/basic.vim ~/.vimrc
 echo "Installed the Basic Vim configuration successfully! Enjoy :-)"
 
