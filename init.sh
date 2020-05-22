@@ -15,6 +15,7 @@ echo "Installed the Basic Vim configuration successfully! Enjoy :-)"
 
 ln -fs `pwd`/bash_profile  ~/.bash_profile
 ln -fs `pwd`/bash_aliases  ~/.bash_aliases
+ln -fs `pwd`/bash_local  ~/.bash_local
 echo "Update bash_profile"
 
 ln -fs `pwd`/tmux.conf  ~/.tmux.conf
