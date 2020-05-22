@@ -2,7 +2,7 @@
 ## setup dotfiles
 
 # load dotfiles
-git clone --quiet https://github.com/sucitw/dotfiles.git ~/dotfiles
+git clone --quiet https://github.com/sucitw/dotfiles.git ~/.dotfiles
 
 #load Tmux plugins
 #git clone --quiet https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
