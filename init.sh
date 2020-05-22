@@ -2,6 +2,7 @@
 ## setup dotfiles
 
 # load dotfiles
+echo "Clone dotfile"
 git clone --quiet https://github.com/sucitw/dotfiles.git ~/.dotfiles
 
 #load Tmux plugins
