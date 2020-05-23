@@ -15,6 +15,12 @@ if [ -f ~/.bash_local ]; then
     source ~/.bash_local
 fi
 
+
+
+#-------------------------------------------------------------------------------
+# Prompt
+#-------------------------------------------------------------------------------
+
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
 
 bind '"\x1b\x5b\x41":history-search-backward'
@@ -31,3 +37,37 @@ else
     PS1="${debian_chroot:+($debian_chroot)}[\u@\h, load: `cat /proc/loadavg | awk '{ print $1; }'`] (\d - \t)\n\w \$ "
 fi
 unset color_prompt force_color_prompt
+
+
+#-------------------------------------------------------------------------------
+# Environment Variables
+#-------------------------------------------------------------------------------
+
+
+
+#-------------------------------------------------------------------------------
+# Aliases
+#-------------------------------------------------------------------------------
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias cd.='cd ..'
+alias cd..='cd ..'
+alias l='ls -alF'
+alias ll='ls -l'
+alias vi=$EDITOR
+alias vim=$EDITOR
+alias which='type -p'
+alias k5='kill -9 %%'
+alias gv='vim +GV +"autocmd BufWipeout <buffer> qall"'
+### Colored ls
+if [ -x /usr/bin/dircolors ]; then
+  eval "`dircolors -b`"
+  alias ls='ls --color=auto'
+  alias grep='grep --color=auto'
+elif [ "$PLATFORM" = Darwin ]; then
+  alias ls='ls -G'
+fi
