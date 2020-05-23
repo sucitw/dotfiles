@@ -18,9 +18,6 @@ rm -rf ~/.bash_aliases > /dev/null 2>&1
 rm -rf ~/.config > /dev/null 2>&1
 
 
-# Git clone dotfiles
-git clone https://github.com/sucitw/dotfiles.git $dotfiles_dir
-
 #==============
 # Create symlinks in the home folder
 #==============
