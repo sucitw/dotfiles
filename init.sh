@@ -5,7 +5,7 @@
 # Variables
 #==========
 dotfiles_dir=~/dotfiles 
-log_fil=~/install-progress_log.txt
+log_file=~/install-progress_log.txt
 
 #=========
 # Deltet existing dot files and folders
@@ -34,8 +34,8 @@ echo "Update bash_profile, Copy bash_local if need"
 #ln -sf $dotfiles_dir/linux-tmux ~/.tmux
 #ln -sf $dotfiles_dir/zsh/zsh_prompt ~/.zsh_prompt
 #ln -sf $dotfiles_dir/zsh/zshrc ~/.zshrc
-ln -sf $dotfiles_dir/config ~/.config
-ln -sf $dotfiles_dir/custom-configs/custom-snips ~/.vim/custom-snips
+#ln -sf $dotfiles_dir/config ~/.config
+#ln -sf $dotfiles_dir/custom-configs/custom-snips ~/.vim/custom-snips
 
 #Load Tmux plugins
 #git clone --quiet https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
