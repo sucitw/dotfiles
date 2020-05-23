@@ -51,14 +51,14 @@ unset color_prompt force_color_prompt
 if [ "$PLATFORM" = 'Darwin' ]; then
   export PATH=~/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$GOPATH/bin:$PATH
   export EDITOR=nvim
-elif [ "$PLATFORM" = Linux ]; then
-    if [ -z "$(which vim)" ]; then
+elif [ "$PLATFORM" = 'Linux' ]; then
+    if [ -x vim ]; then
         export EDITOR=vim
         echo "Editor is vim"
     else
         export EDITOR=vi
         echo "Editor is vi"
-
+    fi
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.:/usr/local/lib
 fi
 export LANG=en_US.UTF-8
@@ -92,3 +92,4 @@ if [ -x /usr/bin/dircolors ]; then
 elif [ "$PLATFORM" = Darwin ]; then
   alias ls='ls -G'
 fi
+
