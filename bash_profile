@@ -1,3 +1,7 @@
+# System Default Information
+
+[ -z ${PLATFORM+x} ] && export PLATFORM=$(uname -s)
+[ -f /etc/bashrc ] && . /etc/bashrc
 
 ## load bash setting
 
@@ -42,6 +46,20 @@ unset color_prompt force_color_prompt
 #-------------------------------------------------------------------------------
 # Environment Variables
 #-------------------------------------------------------------------------------
+
+# OS = MacOS or Linux-like
+if [ "$PLATFORM" = 'Darwin' ]; then
+  export PATH=~/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$GOPATH/bin:$PATH
+  export EDITOR=nvim
+elif [ "$PLATFORM" = Linux ]; then
+    if [ -z "$var" ]; then
+        export EDITOR=vim
+    else
+        export EDITOR=vi
+  export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.:/usr/local/lib
+fi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 
 
