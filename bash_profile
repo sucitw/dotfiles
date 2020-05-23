@@ -52,10 +52,13 @@ if [ "$PLATFORM" = 'Darwin' ]; then
   export PATH=~/bin:/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.7.0/bin:$GOPATH/bin:$PATH
   export EDITOR=nvim
 elif [ "$PLATFORM" = Linux ]; then
-    if [ -z "$var" ]; then
+    if [ -z "$(which vim)" ]; then
         export EDITOR=vim
+        echo "Editor is vim"
     else
         export EDITOR=vi
+        echo "Editor is vi"
+
   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:.:/usr/local/lib
 fi
 export LANG=en_US.UTF-8
