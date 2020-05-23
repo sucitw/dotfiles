@@ -1,6 +1,18 @@
-# load .bash_aliases if exists
-if [ -f /.bash_aliases ]; then
-. /.bash_aliases
+
+## load bash setting
+
+# source bashrc if it exists
+
+if [ -f ~/.bashrc ]; then
+    echo ".profile is sourcing " ~/.bashrc
+    source ~/.bashrc
+fi
+
+        
+# source bashr_local if it exists
+if [ -f ~/.bash_local ]; then
+    echo ".profile is sourcing " ~/.bash_local
+    source ~/.bash_local
 fi
 
 export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD

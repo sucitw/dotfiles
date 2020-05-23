@@ -14,7 +14,6 @@ rm -rf ~/.vim > /dev/null 2>&1
 rm -rf ~/.vimrc > /dev/null 2>&1
 rm -rf ~/.bashrc > /dev/null 2>&1
 rm -rf ~/.bash_profile > /dev/null 2>&1
-rm -rf ~/.bash_aliases > /dev/null 2>&1
 rm -rf ~/.config > /dev/null 2>&1
 
 
@@ -27,8 +26,6 @@ echo "Installed the Basic Vim configuration successfully! Enjoy :-)"
 
 ln -sf $dotfiles_dir/bashrc ~/.bashrc
 ln -sf $dotfiles_dir/bash_profile  ~/.bash_profile
-ln -sf $dotfiles_dir/bash_aliases  ~/.bash_aliases
-ln -sf $dotfiles_dir/bash_  ~/.bash_aliases
 echo "Update bash_profile, Copy bash_local if need"
 
 #ln -sf $dotfiles_dir/linux-tmux ~/.tmux
