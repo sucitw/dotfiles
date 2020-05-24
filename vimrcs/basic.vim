@@ -77,8 +77,8 @@ set so=7
 " Avoid garbled characters in Chinese language windows OS
 let $LANG='en' 
 set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
+"source $VIMRUNTIME/delmenu.vim
+"source $VIMRUNTIME/menu.vim
 
 " Turn on the WiLd menu
 set wildmenu
@@ -140,8 +140,9 @@ endif
 
 
 " Add a bit extra margin to the left
-set foldcolumn=1
-
+if v:version > 704
+    set foldcolumn=1
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -155,7 +156,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme zenburn
 catch
 endtry
 
@@ -272,7 +273,9 @@ endtry
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Enable mouse support for 'all' modes 
-set mouse =a
+if has('mouse')
+    set mouse=a
+endif
 """"""""""""""""""""""""""""""
 " => Status line
 """"""""""""""""""""""""""""""

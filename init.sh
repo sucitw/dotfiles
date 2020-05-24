@@ -10,7 +10,7 @@ log_file=~/install-progress_log.txt
 #=========
 # Deltet existing dot files and folders
 #=========
-#rm -rf ~/.vim > /dev/null 2>&1
+rm -rf ~/.vim > /dev/null 2>&1
 rm -rf ~/.vimrc > /dev/null 2>&1
 rm -rf ~/.bashrc > /dev/null 2>&1
 rm -rf ~/.bash_profile > /dev/null 2>&1
@@ -20,7 +20,7 @@ rm -rf ~/.config > /dev/null 2>&1
 #==============
 # Create symlinks in the home folder
 #==============
-#ln -sf $dotfiles_dir/vim ~/.vim
+ln -sf $dotfiles_dir/vim ~/.vim
 ln -sf $dotfiles_dir/vimrcs/basic.vim ~/.vimrc
 echo "Installed the Basic Vim configuration successfully! Enjoy :-)"
 
